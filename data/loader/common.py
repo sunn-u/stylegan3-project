@@ -1,13 +1,12 @@
 
-from data.loader.build import DATA_LOADER_REGISTRY
+from torch.utils.data import Dataset
 from data.utils import load_image
 
 
-@DATA_LOADER_REGISTRY.register()
-class FFHQ:
-    def __init__(self, image_type, datasets, transforms):
-        self.image_type = image_type
+class BasicLoader(Dataset):
+    def __init__(self, datasets, image_type, transforms):
         self.datasets = datasets
+        self.image_type = image_type
         self.transforms = transforms
 
     def __len__(self):
