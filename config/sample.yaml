@@ -1,52 +1,101 @@
 
 MODEL:
-  NAME:
-  CONV2D:
-    IN_CHANNEL:
-    STRIDE:
-    KERNEL_SIZE:
-    PADDING:
-    HIDDEN_DIMS:
-    DILATION:
-  MAX_POOLING:
-    STRIDE:
-    KERNEL:
-  ACTIVATE:
-    NAME:
-  OPRIMIZER:
-    NAME:
-  SCHEDULER:
-    STEP_SIZE:
-    GAMMA:
-  LOSS:
-    NAME:
-  INFERENCE:
-    NAME:
+  GENERATOR:
+    NAME: BasicGenerator
+    MAPPING_NETWORK:
+      CONV2D:
+        IN_CHANNEL:
+        STRIDE:
+        KERNEL_SIZE:
+        PADDING:
+        HIDDEN_DIMS:
+        DILATION:
+        MAX_POOLING:
+          STRIDE:
+          KERNEL:
+        ACTIVATE:
+          NAME:
+        OPRIMIZER:
+          NAME:
+        SCHEDULER:
+          STEP_SIZE:
+          GAMMA:
+        LOSS:
+          NAME:
+        INFERENCE:
+    SYNTHESIS_NETWORK:
+      CONV2D:
+        IN_CHANNEL:
+        STRIDE:
+        KERNEL_SIZE:
+        PADDING:
+        HIDDEN_DIMS:
+        DILATION:
+        MAX_POOLING:
+          STRIDE:
+          KERNEL:
+        ACTIVATE:
+          NAME:
+        OPRIMIZER:
+          NAME:
+        SCHEDULER:
+          STEP_SIZE:
+          GAMMA:
+        LOSS:
+          NAME:
+        INFERENCE:
+  DISCRIMINATOR:
+    NAME: BasicDiscriminator
+    CONV2D:
+      IN_CHANNEL:
+      STRIDE:
+      KERNEL_SIZE:
+      PADDING:
+      HIDDEN_DIMS:
+      DILATION:
+      MAX_POOLING:
+        STRIDE:
+        KERNEL:
+      ACTIVATE:
+        NAME:
+      OPRIMIZER:
+        NAME:
+      SCHEDULER:
+        STEP_SIZE:
+        GAMMA:
+      LOSS:
+        NAME:
+      INFERENCE:
 
 TRANSFORMS:
   RESIZE:
-    PROBABILITIES:
-      ONE_OF_PROBABILITY:
-        VERTICALFLIP:
-    CROP:
-    PIXEL_MEAN:
-    PIXEL_STD:
+    SIZE: 1024
+    MODE: 2 # 0: nearest, 1: lanczos, 2: bilinear, 3: bicubic, 4:box , 5: hamming
+  CROP: 10
 
 SOLVER:
-  DEVICE:
-  BATCH_SIZE:
+  BATCH_SIZE: 32
   LOG:
-    LEVEL:
-    STEPS:
+    LEVEL: 10 #debug
+    STEPS: 10
   EVALUATION:
-    STEPS:
-  EPOCHS:
+    STEPS: 10
+  EPOCHS: 10000
+
+EVALUATION:
+  NAME: FFHQ
+  MEASURES:
+    NAMES:
+    SELECT:
 
 DATA:
-  NAME:
-    LOADER:
-      NUM_WORKERS:
-    DATASET:
-      ROOT_DIR:
+  NAME: FFHQ
+  LOADER:
+    NUM_WORKERS: 8
+    SHUFFLE: True
+  DATASET:
+    ROOT_DIR: /mnt/dms
+    IMG_EXT: ['jpg', 'JPG', 'png', 'PNG']
+    TYPE: RGB
 
-OUTPUT_DIR:
+OUTPUT_DIR: /mnt/dms
