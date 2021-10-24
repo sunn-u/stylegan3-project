@@ -11,7 +11,7 @@ def load_yaml(config_path: str) -> yaml:
     return configs
 
 def setup_configs(args: Argparse, configs: dict) -> dict:
-    configs['SOLVER']['DEVICE'] = is_gpu(args)
+    configs["SOLVER"]["DEVICE"] = is_gpu(args)
     return configs
 
 def is_gpu(args: Argparse):
