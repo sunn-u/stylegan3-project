@@ -1,3 +1,4 @@
+# Coding by SunWoo(tjsntjsn20@gmail.com)
 
 from torch.utils.data import Dataset
 from data.utils import load_image
