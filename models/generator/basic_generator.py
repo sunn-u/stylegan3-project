@@ -1,5 +1,9 @@
 # Coding by SunWoo(tjsntjsn20@gmail.com)
 
+'''
+    Basic frame for Generator.
+'''
+
 import torch.nn as nn
 
 from models.build import GENERATOR_REGISTRY

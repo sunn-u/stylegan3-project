@@ -1,5 +1,10 @@
 # Coding by SunWoo(tjsntjsn20@gmail.com)
 
+'''
+    Codes for Synthesis network using in Generator.
+'''
+
+
 import torch.nn as nn
 
 

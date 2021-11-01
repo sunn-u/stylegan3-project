@@ -1,5 +1,10 @@
 # Coding by SunWoo(tjsntjsn20@gmail.com)
 
+'''
+    Codes for building Generator and Discriminator > Models.
+'''
+
+
 from fvcore.common.registry import Registry
 
 GENERATOR_REGISTRY = Registry("GENERATOR")
