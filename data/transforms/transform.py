@@ -1,3 +1,9 @@
+# Coding by SunWoo(tjsntjsn20@gmail.com)
+
+'''
+    Functions of Data-Transforms.
+'''
+
 
 import torchvision.transforms.functional as F
 from torchvision.transforms.functional import _interpolation_modes_from_int

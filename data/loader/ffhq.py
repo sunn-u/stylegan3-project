@@ -1,5 +1,10 @@
 # Coding by SunWoo(tjsntjsn20@gmail.com)
 
+'''
+    Data-Loader for FFHQ datasets.
+'''
+
+
 from data.loader.build import DATA_LOADER_REGISTRY
 from data.loader.common import BasicLoader
 

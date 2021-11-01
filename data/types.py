@@ -1,5 +1,10 @@
 # Coding by SunWoo(tjsntjsn20@gmail.com)
 
+'''
+    Definition for declaration for types.
+'''
+
+
 from typing import TypeVar
 
 Argparse = TypeVar("argparse.Namespace")

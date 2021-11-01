@@ -1,5 +1,9 @@
 # Coding by SunWoo(tjsntjsn20@gmail.com)
 
+'''
+    Getting Data-set from FFHQ datasets.
+'''
+
 from data.datasets.build import DATASETS_REGISTRY
 from data.utils import get_all_items
 

@@ -1,3 +1,9 @@
+# Coding by SunWoo(tjsntjsn20@gmail.com)
+
+'''
+    Codes for building Transforms.
+'''
+
 
 from data.transforms.transform import Resize, Crop, ToTensor
 
