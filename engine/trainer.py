@@ -1,5 +1,11 @@
 # Coding by SunWoo(tjsntjsn20@gmail.com)
 
+'''
+    Basic frame of trainer.
+'''
+
+
+
 class Trainer:
     def __init__(self, configs, logger, data_loader, generator, discriminator):
         self.configs = configs
