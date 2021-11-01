@@ -1,5 +1,10 @@
 # Coding by SunWoo(tjsntjsn20@gmail.com)
 
+'''
+    Codes for setting configs with a yaml file and Argparse.
+'''
+
+
 import yaml
 import torch
 

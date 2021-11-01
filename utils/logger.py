@@ -1,5 +1,10 @@
 # Coding by SunWoo(tjsntjsn20@gmail.com)
 
+'''
+    Codes for logger : build
+'''
+
+
 import os
 import logging
 from logging.handlers import TimedRotatingFileHandler

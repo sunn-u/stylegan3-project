@@ -1,7 +1,13 @@
 # Coding by SunWoo(tjsntjsn20@gmail.com)
 
+'''
+    Scripts for Training.
+'''
+
+
 import argparse
 
+from data.types import Argparse
 from utils.defaults import load_yaml, setup_configs
 from utils.logger import build_logger
 from data.transforms.build import build_transforms
@@ -11,7 +17,7 @@ from models.build import build_models
 from engine.trainer import Trainer
 
 
-def setting_args():
+def setting_args() -> Argparse:
     parser = argparse.ArgumentParser(description='Training')
     parser.add_argument('--config_file', type=str, required=True, help='config file path for training based on yaml.')
     parser.add_argument('--gpu_id', type=int, default=0, help='a number of gpu')
